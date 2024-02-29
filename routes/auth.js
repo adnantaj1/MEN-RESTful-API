@@ -6,7 +6,6 @@ const jwt = require("jsonwebtoken");
 
 // register a user
 // Assuming registerValidation and User model are correctly imported
-
 router.post("/register", async (req, res) => {
     try {
         // Validate user input

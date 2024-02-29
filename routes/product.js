@@ -12,10 +12,11 @@ module.exports = router;
 //     .catch(err => res.status(500).send({message: err.message}))
 // });
 
+// create Product
 router.post("/", verifyToken,(req, res) => {
     const newData = req.body;
     product.create(newData)
-        .then(createdData => res.send(createdData))
+        .then(createdData => res.status(201).res.send(createdData))
         .catch(err => res.status(500).send({message: err.message}));
 });
 
